@@ -38,14 +38,6 @@
     } catch(Exception $e) {
         echo "Failed: " . $e;
     }
-    // try {
-    //     $conn = new PDO("sqlsrv:server = tcp:sb1server.database.windows.net,1433; Database = sb1DB", "sb1", "Muhammad90%");
-    //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // }
-    // catch (PDOException $e) {
-    //     print("Error connecting to SQL Server.");
-    //     die(print_r($e));
-    // }
 
     if (isset($_POST['submit'])) {
         try {
