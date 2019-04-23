@@ -26,19 +26,26 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php
-    $host = "https://sb1webapp.azurewebsites.net";
+    $host = "f457f94f-cd96-4124-9721-c6d66592fc7b";
     $user = "sb1";
     $pass = "Muhammad90;
     $db = "sb1DB";
 
+
     try {
-        $conn = new PDO("sqlsrv:server = tcp:sb1server.database.windows.net,1433; Database = sb1DB", "sb1", "Muhammad90%");
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    } catch(Exception $e) {
+        echo "Failed: " . $e;
     }
-    catch (PDOException $e) {
-        print("Error connecting to SQL Server.");
-        die(print_r($e));
-    }
+    // try {
+    //     $conn = new PDO("sqlsrv:server = tcp:sb1server.database.windows.net,1433; Database = sb1DB", "sb1", "Muhammad90%");
+    //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // }
+    // catch (PDOException $e) {
+    //     print("Error connecting to SQL Server.");
+    //     die(print_r($e));
+    // }
 
     if (isset($_POST['submit'])) {
         try {
