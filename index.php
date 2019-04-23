@@ -32,7 +32,7 @@
     $db = "sb1DB";
 
     try {
-        $conn = new PDO("sqlsrv:server = tcp:sb1server.database.windows.net,1433; Database = sb1DB", "sb1", "{your_password_here}");
+        $conn = new PDO("sqlsrv:server = tcp:sb1server.database.windows.net,1433; Database = sb1DB", "sb1", "{Muhammad90%}");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     catch (PDOException $e) {
