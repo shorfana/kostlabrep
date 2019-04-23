@@ -26,7 +26,7 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php
-    $host = "sb1server.database.windows.net";
+    $host = "https://sb1webapp.azurewebsites.net";
     $user = "sb1";
     $pass = "Muhammad90;
     $db = "sb1DB";
