@@ -26,7 +26,7 @@
        <input type="submit" name="load_data" value="Load Data" />
  </form>
  <?php
-    $host = "f457f94f-cd96-4124-9721-c6d66592fc7b";
+    $host = "sb1server";
     $user = "sb1";
     $pass = "Muhammad90;
     $db = "sb1DB";
